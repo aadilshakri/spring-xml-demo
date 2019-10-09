@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
-    <bean id="movies" class="com.stackroute.domain.Movie">
-            <property name = "Actor">
+    <bean name="MovieA,MovieB" class="com.stackroute.domain.Movie" scope="prototype">
+            <constructor-arg name = "actor">
                 <bean id="actors" class="com.stackroute.domain.Actor">
-                    <property name="name" value="Sharukh Khan"></property>
-                    <property name="gender" value="Male"></property>
-                    <property name="age" value="54"></property>
+                    <constructor-arg name="name" value="Sharukh Khan" type="java.lang.String"></constructor-arg>
+                    <constructor-arg name="gender" value="Male" type="java.lang.String"></constructor-arg>
+                    <constructor-arg name="age" value="54" type="int"></constructor-arg>
                 </bean>
-            </property>
+            </constructor-arg>
     </bean>
 </beans>
