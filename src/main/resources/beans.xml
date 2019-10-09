@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
- http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+ http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+    default-init-method="customInit"
+    default-destroy-method="customDestroy">
     <bean name="MovieA,MovieB" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName">
 <!--            <constructor-arg name = "actor">-->
     </bean>
@@ -11,5 +13,7 @@
         <constructor-arg name="gender" value="Male " type="java.lang.String"></constructor-arg>
         <constructor-arg name="age" value="54 " type="int"></constructor-arg>
     </bean>
-<!--            </constructor-arg>-->
+
+    <bean id="beanLifeCycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+    </bean>
 </beans>
