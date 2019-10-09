@@ -17,8 +17,8 @@ public class App
     {
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
         Movie movieInfo = context.getBean("MovieA", Movie.class);
-        Movie movieInfo1 = context.getBean("MovieB", Movie.class);
         movieInfo.getActor().displayInfo();
+        Movie movieInfo1 = context.getBean("MovieB", Movie.class);
         System.out.println(movieInfo==movieInfo1);
     }
 }
