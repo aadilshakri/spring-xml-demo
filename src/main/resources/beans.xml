@@ -15,5 +15,10 @@
     </bean>
 
     <bean id="beanLifeCycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+
+    </bean>
+
+    <bean id="BeanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean">
+
     </bean>
 </beans>
